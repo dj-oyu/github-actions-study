@@ -19,3 +19,8 @@ jobs:
           echo "Running on: ${{ runner.os }}"
           echo "Triggered by: ${{ github.actor }}"
           echo "Repository: ${{ github.repository }}"
+      
+      - name: Test Function
+        run: echo "${JOIN_EVENT}"
+        env:
+          JOIN_EVENT: ${{ join(github.event.*.html_url, ', ') }}
