@@ -1,0 +1,21 @@
+name: Simple Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello
+        run: echo "Hello, GitHub Actions!"
+
+      - name: Show Date
+        run: echo "Current date is $(date)"
+
+      - name: Show Environment
+        run: |
+          echo "Running on: ${{ runner.os }}"
+          echo "Triggered by: ${{ github.actor }}"
+          echo "Repository: ${{ github.repository }}"
