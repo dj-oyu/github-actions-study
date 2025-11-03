@@ -26,6 +26,6 @@ jobs:
           JOIN_EVENT: ${{ join(github.event.*.html_url, ', ') }}
           
       - name: Complex Type Conversion
-        run: echo "1 + true = ${SUM}"
+        run: echo "1 == true = ${SUM}"
         env:
-          SUM: ${{ 1 + true }}
+          SUM: ${{ 1 == true }}
