@@ -1,6 +1,6 @@
 # GitHub Actions Study
 
-GitHub Actionsの練習用リポジトリです。
+GitHub Actionsの練習用リポジトリです。😊
 
 ## ワークフロー
 
