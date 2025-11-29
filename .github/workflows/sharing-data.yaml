@@ -1,0 +1,12 @@
+name: github output
+on: workflow_dispatch
+jobs:
+  share:
+    runs-on: ubuntu-slim
+    steps:
+      - id: src
+        run: echo "result=hello" >> "${GITHUB_OUTPUT}" # 共有ファイルに書き出し
+      - env:
+          RESULT: ${{ steps.src.outputs.result }} # stepsコンテキストからstep-idで参照
+                                                  # 自分で設定したキー名
+        run: echo "${RESULT}"
