@@ -2,6 +2,9 @@ name: Simple Workflow
 
 on:
   workflow_dispatch:
+defaults:
+  run:
+    shell: bash
 
 jobs:
   hello:
