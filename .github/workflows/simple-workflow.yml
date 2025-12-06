@@ -6,7 +6,7 @@ on:
 jobs:
   hello:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 1
     steps:
       - name: Say Hello
         run: echo "Hello, GitHub Actions!"

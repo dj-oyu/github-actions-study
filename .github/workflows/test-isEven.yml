@@ -5,6 +5,7 @@ on:
 jobs:
   test-isEven:
     runs-on: ubuntu-slim
+    timeout-minutes: 1
     steps:
       - uses: actions/checkout@v2
       - uses: oven-sh/setup-bun@v2

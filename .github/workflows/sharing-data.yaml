@@ -3,6 +3,7 @@ on: workflow_dispatch
 jobs:
   share:
     runs-on: ubuntu-slim
+    timeout-minutes: 1
     steps:
       - id: src
         run: echo "result=hello" >> "${GITHUB_OUTPUT}" # 共有ファイルに書き出し
