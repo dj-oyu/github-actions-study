@@ -1,5 +1,8 @@
 name: github output
 on: workflow_dispatch
+defaults:
+  run:
+    shell: bash
 jobs:
   share:
     runs-on: ubuntu-slim

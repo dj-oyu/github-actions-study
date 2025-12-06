@@ -2,6 +2,9 @@ name: Go Test
 on:
   pull_request:
     paths: ['go/**/*.go']
+defaults:
+  run:
+    shell: bash
 jobs:
   go-test:
    runs-on: ubuntu-slim
